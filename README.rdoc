@@ -1,0 +1,31 @@
+= reloader
+
+Reloads all your assets with minimal code. Inspired by livereload: http://www.github.com/moccko/livereload . The main difference is and the reason why this project has been started is that it will plugin into your Rails app. So you don't have to think about activating or even installing a browser plugin. In development it will automatically reloads assets when they are changed when you add this gem to your gemfile e.g.
+
+
+    gem "reloader"
+
+See the TODO file for stuff that is still open. Note that this project is currently complete for my personal usage, but I don't want to give guarantees for others yet.
+
+
+### Usage
+
+Start your rails app and in the root directory of your Rails app:
+
+    bundle exec reloader
+    
+Then start editing files and see how things are being reloaded!
+
+== Note on Patches/Pull Requests
+ 
+* Fork the project.
+* Make your feature addition or bug fix.
+* Add tests for it. This is important so I don't break it in a
+  future version unintentionally.
+* Commit, do not mess with rakefile, version, or history.
+  (if you want to have your own version, that is fine but bump version in a commit by itself I can ignore when I pull)
+* Send me a pull request. Bonus points for topic branches.
+
+== Copyright
+
+Copyright (c) 2010 Jeroen van Dijk. See LICENSE for details.

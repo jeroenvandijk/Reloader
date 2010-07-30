@@ -1,0 +1,39 @@
+# require 'faye'
+# puts "loading server"
+# faye_server = Faye::RackAdapter.new(:mount => '/faye', :timeout => 45)
+# 
+# Thread.new do
+#   puts "loading watchr"
+#   require 'watchr'
+#   script = Watchr::Script.new
+# 
+#   client = Faye::Client.new('http://0.0.0.0:9292/faye')
+#   
+#   script.watch(%r{(?:app|lib|public/images|public/javascripts)/(.*)}) do |match|
+#     file = match[0]
+# 
+#     file_extension = file.split('.').last
+#     
+#     mapping = { 
+#                 "sass" => [ "css", "css" ] ],
+#                 "png"  => [ "png", "image"],
+#                 "gif"  => [ "gif", "image"],
+#                 "jpeg" => [ "jpeg", "image"],
+#                 "jpg"  => [ "jpg", "image"] }
+#     
+#     extension, type = mapping[file_extension] || [file_extension, file_extension]
+#     
+#     filename = File.basename(file, ".*") + ".#{extension}"
+# 
+#     client.publish('/files', {
+#       'name'      => [ filename ],
+#       'timestamp' => Time.now.to_i,
+#       'type' => type
+#     })
+# 
+#   end
+#   contrl = Watchr::Controller.new(script, Watchr.handler.new)
+#   contrl.run
+# end
+# 
+# run faye_server
