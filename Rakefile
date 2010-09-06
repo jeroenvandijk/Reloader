@@ -10,10 +10,10 @@ begin
     gem.email = "jeroen@jeevidee.nl"
     gem.homepage = "http://github.com/jeroenvandijk/reloader"
     gem.authors = ["Jeroen van Dijk"]
-    gem.add_dependency "rspactor", "0.7.0.beta.5"
-    gem.add_dependency "faye", "0.5.0"
-    gem.add_dependency "thin", "1.2.7"
-    gem.add_dependency "rev",  "0.3.2"
+    gem.add_dependency "rspactor", ">= 0.7.0.beta.5"
+    gem.add_dependency "faye", ">= 0.5.0"
+    gem.add_dependency "thin", ">= 1.2.7"
+    gem.add_dependency "rev",  ">= 0.3.2"
     gem.files =  FileList["[A-Z]*", "{app,bin,config,lib,public}/**/*"]
 
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
